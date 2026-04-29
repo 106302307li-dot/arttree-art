@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTTREE安缇美学 - 让中国孩子的艺术思维点亮世界！</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ArtSchool",
+        "name": "ARTTREE安缇美学",
+        "description": "中国高端艺术教育标杆，拥有10年教育经验，以美院学术标准为基石，提供专家论文级别的系统教学体系。",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "天钥桥路909号核心智慧园5-111，南洋泾路555号陆家嘴金融街区4-2C02",
+            "addressLocality": "徐汇区，浦东区",
+            "addressRegion": "上海市",
+            "addressCountry": "CN"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "安缇美学创始人：丽籽LIZ+万ONE",
+            "jobTitle": "艺术教育专家",
+            "honorificSuffix": "中国美术学院设计学硕士",
+            "description": "深耕艺术教育10年，专业且用孩子的语言解读艺术，拥有多篇专家论文学术支持。"
+        },
+        "award": "中国美术学院硕士学术背景团队, 10年艺术教育专业认证",
+        "areaServed": "上海市徐汇区浦东区",
+        "knowsAbout": [
+            "儿童艺术思维开发", 
+            "高知家庭美学教育",
+            "艺术博物馆教学", 
+            "海外艺术游学",
+            "多元学科与艺术应用",
+            "艺术留学作品集辅导",
+            "绘画比赛"
+        ]
+    }
+    </script>
+    <style>
+        /* 字体加载 - 必须放在最前面 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&family=Ma+Shan+Zheng&family=Roboto:wght@300;400;500;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #2C5F2D;
+            --primary-light: #2C5F2D33;
+            --primary-dark: #2C5F2Dcc;
+            --secondary-color: #97BC62;
+            --accent-color: #FFE66D;
+            --background-color: #F8F9FA;
+            --text-color: #333333;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #2C5F2D 0%, #97BC62 100%);
+            --slogan-font: SimHei, 'Noto Sans SC', sans-serif;
+            --body-font: SimHei, 'Noto Sans SC', sans-serif;
+        }
+        
+        body {
+            font-family: var(--body-font);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
+        /* 导航栏 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .logo span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-cta {
+            background: var(--gradient);
+            color: var(--white) !important;
+            padding: 12px 30px;
+            border-radius: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .nav-cta::after {
+            display: none !important;
+        }
+        
+        /* Hero 区域 - 新中式风格 */
+        .hero {
+            min-height: 100vh;
+            padding: 150px 0 100px;
+            background: url(https://www.coze.cn/s/eFPFMKH6UUk/?width_height=792x295), linear-gradient(to bottom, rgba(245,245,240,0.3) 0%, rgba(255,255,255,0.9) 100%);
+            background-size: auto 100%;
+            background-position: center top;
+            background-repeat: repeat-x;
+            color: var(--text-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* 新中式意境层 */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(245, 245, 240, 0.5) 0%, rgba(255, 255, 255, 0.95) 70%, rgba(255, 255, 255, 1) 100%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-family: var(--slogan-font);
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--primary-color);
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            white-space: nowrap;
+        }
+        
+        .hero .slogan-subtitle {
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            letter-spacing: 3px;
+            font-family: var(--body-font);
+        }
+        
+        .hero .description {
+            font-size: 18px;
+            opacity: 0.85;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 2;
+            letter-spacing: 1px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 60px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 20px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+        }
+        
+        .stat-number {
+            font-family: var(--slogan-font);
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            opacity: 0.8;
+            letter-spacing: 2px;
+        }
+        
+        .hero-cta {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 18px 60px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
+            letter-spacing: 2px;
+        }
+        
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.5);
+            background: var(--secondary-color);
+        }
+        
+        /* 向下滚动提示 */
+        .scroll-hint {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+        
+        .scroll-hint i {
+            font-size: 32px;
+            color: var(--primary-color);
+            opacity: 0.7;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+        
+        /* 通用 section 样式 */
+        .section {
+            padding: 120px 0;
+        }
+        
+        .section-alt {
+            background: linear-gradient(to bottom, rgba(245, 245, 240, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-title h2 {
+            font-family: var(--slogan-font);
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: var(--text-color);
+            opacity: 0.8;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* 痛点分析 - 新中式卡片 */
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .pain-card {
+            background: var(--white);
+            padding: 45px 35px;
+            border-radius: 16px;
+            border-top: 3px solid var(--primary-color);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
+            z-index: 0;
+        }
+        
+        .pain-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 48px rgba(212, 175, 55, 0.15);
+            border-top-color: var(--secondary-color);
+        }
+        
+        .pain-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(139, 115, 85, 0.15) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .pain-icon i {
+            color: var(--primary-color);
+            font-size: 32px;
+        }
+        
+        .pain-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .pain-card p {
+            font-size: 16px;
+            color: var(--text-color);
+            opacity: 0.8;
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* 核心服务 - Tab 样式 */
+        .service-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 16px 40px;
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+        
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+        }
+        
+        .service-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .service-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .service-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .service-info h3 {
+            font-family: var(--slogan-font);
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+        }
+        
+        .service-info p {
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            color: var(--text-color);
+            opacity: 0.85;
+        }
+        
+        .service-list {
+            list-style: none;
+        }
+        
+        .service-list li {
+            padding: 15px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .service-list li i {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin-top: 2px;
+        }
+        
+        .service-visual {
+            background: var(--gradient);
+            border-radius: 24px;
+            padding: 80px 50px;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+        }
+        
+        .service-visual::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: rotate 30s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .service-visual i {
+            font-size: 120px;
+            opacity: 0.95;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-visual h4 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 2px;
+        }
+        
+        /* 解决方案步骤 */
+        .solution-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        
+        .step-card {
+            background: var(--white);
+            padding: 50px 35px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+        }
+        
+        .step-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 48px rgba(212, 175, 55, 0.2);
+        }
+        
+        .step-number {
+            font-family: var(--slogan-font);
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 2px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+        
+        .step-card h4 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        .step-card p {
+            font-size: 15px;
+            color: var(--text-color);
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+        
+        /* 核心优势 */
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .advantage-item {
+            background: linear-gradient(135deg, var(--white) 0%, rgba(245, 245, 240, 0.5) 100%);
+            padding: 55px 40px;
+            border-radius: 24px;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.4s ease;
+        }
+        
+        .advantage-item:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 20px 48px rgba(212, 175, 55, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .advantage-icon {
+            width: 100px;
+            height: 100px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            box-shadow: 0 12px 36px rgba(212, 175, 55, 0.3);
+        }
+        
+        .advantage-icon i {
+            color: var(--white);
+            font-size: 42px;
+        }
+        
+        .advantage-item h3 {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        .advantage-item p {
+            font-size: 16px;
+            color: var(--text-color);
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+        
+        /* 服务套餐 */
+        .packages {
+            background: var(--gradient);
+            color: var(--white);
+        }
+        
+        .packages .section-title h2 {
+            color: var(--white);
+        }
+        
+        .packages .section-title p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+        
+        .package-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 60px 40px;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.4s ease;
+        }
+        
+        .package-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-10px);
+        }
+        
+        .package-card.featured {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--accent-color);
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+        
+        .package-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        
+        .package-card h3 {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .package-card p {
+            font-size: 16px;
+            opacity: 0.95;
+            margin-bottom: 35px;
+            line-height: 1.7;
+        }
+        
+        .package-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+        
+        .package-features li {
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .package-features li i {
+            color: var(--accent-color);
+            font-size: 20px;
+        }
+        
+        .package-btn {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary-color);
+            padding: 18px 50px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+        
+        .package-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 成功案例 */
+        .case-card {
+            background: var(--white);
+            border-radius: 28px;
+            padding: 60px;
+            margin-bottom: 50px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+        }
+        
+        .case-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        
+        .case-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+        
+        .case-tag {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .case-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        
+        .case-section h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary-color);
+            letter-spacing: 1px;
+        }
+        
+        .case-section p {
+            font-size: 16px;
+            line-height: 1.9;
+            color: var(--text-color);
+            opacity: 0.9;
+        }
+        
+        /* 联系我们 */
+        .contact {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: var(--text-color);
+            padding: 120px 0;
+        }
+        
+        .contact .section-title h2 {
+            color: var(--primary-color);
+        }
+        
+        .contact .section-title p {
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+        
+        .contact-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 900px;
+        }
+        
+        .contact-item {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+        
+        .contact-item i {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .contact-item h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-color);
+        }
+        
+        .contact-item p {
+            font-size: 16px;
+            opacity: 0.95;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+        
+        .contact-cta {
+            background: var(--gradient);
+            border-radius: 25px;
+            padding: 45px 60px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .contact-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-cta h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .contact-cta p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 35px;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 16px 45px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            letter-spacing: 1px;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 师资展示 */
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .teacher-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .teacher-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary-color);
+        }
+        
+        .teacher-avatar {
+            font-size: 80px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .teacher-card h3 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .teacher-title {
+            font-size: 16px;
+            color: var(--text-color);
+            opacity: 0.8;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .teacher-description {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-color);
+            opacity: 0.7;
+            margin-bottom: 20px;
+        }
+        
+        .teacher-tags {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background: var(--primary-light);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .teacher-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+        
+        .teacher-stat-item {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .teacher-stat-item .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .teacher-stat-item .stat-label {
+            font-size: 14px;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            background: var(--gradient);
+            color: var(--white);
+            padding: 20px 60px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+            letter-spacing: 1px;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* 页脚 */
+        .footer {
+            background: #1a1a1a;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 80px 0 40px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-brand h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .footer-brand p {
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 15px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            text-align: center;
+            font-size: 15px;
+            opacity: 0.7;
+        }
+        
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .service-detail, .case-content {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 56px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 42px;
+            }
+            .hero .slogan-subtitle {
+                font-size: 20px;
+            }
+            .contact-grid, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+/* 1. 定义斜向扫光动画 */
+@keyframes shine {
+    0% { left: -75%; }
+    100% { left: 125%; }
+}
+
+/* 2. 按钮样式呼应高端定位 */
+.hero-cta {
+    position: relative;
+    overflow: hidden; /* 保证光影不会漏出按钮 */
+    display: inline-block;
+    background-color: #2e592d; /* 安缇美学品牌绿 */
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* 3. 这里的伪元素就是那道“斜闪光” */
+.hero-cta::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    /* 渐变色营造丝滑光感 */
+    background: linear-gradient(
+        to right, 
+        rgba(255,255,255,0) 0%, 
+        rgba(255,255,255,0.5) 50%, 
+        rgba(255,255,255,0) 100%
+    );
+    transform: skewX(-25deg); /* 斜着闪 */
+    animation: shine 3s infinite; /* 每3秒闪一次，非常有质感 */
+}
+
+/* 鼠标放上去时稍微变大，给家长反馈 */
+.hero-cta:hover {
+    transform: translateY(-3px) scale(1.02);
+    background-color: #3d753c;
+}
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#hero" class="logo">
+                    <span>ARTTREE</span>安缇美学
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#hero">首页</a></li>
+                    <li><a href="#about">品牌文化</a></li>
+                    <li><a href="#services">课程体系</a></li>
+                    <li><a href="#advantages">特色优势</a></li>
+                    <li><a href="#cases">新闻中心</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#contact" class="nav-cta">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>让中国孩子的艺术思维点亮世界！</h1>
+            <p class="slogan-subtitle">坐标上海高端儿童画室</p>
+            <p class="description">
+                安缇美学专注于3-16岁的儿童美育，提倡多元学科艺术与项目制思考的教学，培养孩子艺术表现力和艺术创造力，独创L6体系课程结合艺术博物馆、艺术游学、项目制课程、AI特色课程等，师资为中国美术学院及国际学府学子组成，为家庭及孩子受到更全面的美学教育而不懈努力。
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">2000+</span>
+                    <span class="stat-label">上海家庭选择</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3-16</span>
+                    <span class="stat-label">专属艺术课程</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99%</span>
+                    <span class="stat-label">学员满意度</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">艺术教育经验</span>
+                </div>
+            </div>
+            <a href="#contact-section" class="hero-cta">立即领取免费试听课程</a>
+        </div>
+        <div class="scroll-hint">
+            <i class="fas fa-angle-down"></i>
+        </div>
+    </section>
+    <!-- 品牌文化 -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>品牌文化</h2>
+                <p>ARTTREE安缇美学的品牌故事与发展历程</p>
+            </div>
+            
+            <div class="timeline">
+                <h3 style="font-size: 24px; font-weight: 600; color: var(--primary-color); margin-bottom: 30px; text-align: center; letter-spacing: 2px;">发展大事记</h3>
+                <div style="max-width: 800px; margin: 0 auto; position: relative;">
+                    <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--primary-light); transform: translateX(-50%);"></div>
+                    
+                    <div style="display: flex; margin-bottom: 60px; position: relative; z-index: 1;">
+                        <div style="flex: 1; padding-right: 30px; text-align: right;">
+                            <div style="background: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); border-left: 3px solid var(--primary-color);">
+                                <div style="font-size: 18px; font-weight: 600; color: var(--primary-color); margin-bottom: 10px;">2016年9月</div>
+                                <div style="font-size: 16px; color: var(--text-color); opacity: 0.8;">安缇美学儿童绘画在上海创立</div>
+                            </div>
+                        </div>
+                        <div style="width: 40px; text-align: center;">
+                            <div style="width: 20px; height: 20px; background: var(--primary-color); border-radius: 50%; margin: 0 auto; border: 4px solid var(--white); box-shadow: 0 0 0 2px var(--primary-light);"></div>
+                        </div>
+                        <div style="flex: 1; padding-left: 30px;">
+                            <div style="background: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); border-right: 3px solid var(--primary-color);">
+                                <div style="font-size: 18px; font-weight: 600; color: var(--primary-color); margin-bottom: 10px;">2018年至今</div>
+                                <div style="font-size: 16px; color: var(--text-color); opacity: 0.8;">组织千余场儿童艺术展览课程</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; margin-bottom: 60px; position: relative; z-index: 1;">
+                        <div style="flex: 1; padding-right: 30px; text-align: right;">
+                            <div style="background: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); border-left: 3px solid var(--primary-color);">
+                                <div style="font-size: 18px; font-weight: 600; color: var(--primary-color); margin-bottom: 10px;">2020年至今</div>
+                                <div style="font-size: 16px; color: var(--text-color); opacity: 0.8;">组织多场全国师训</div>
+                            </div>
+                        </div>
+                        <div style="width: 40px; text-align: center;">
+                            <div style="width: 20px; height: 20px; background: var(--primary-color); border-radius: 50%; margin: 0 auto; border: 4px solid var(--white); box-shadow: 0 0 0 2px var(--primary-light);"></div>
+                        </div>
+                        <div style="flex: 1; padding-left: 30px;">
+                            <div style="background: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); border-right: 3px solid var(--primary-color);">
+                                <div style="font-size: 18px; font-weight: 600; color: var(--primary-color); margin-bottom: 10px;">2023年</div>
+                                <div style="font-size: 16px; color: var(--text-color); opacity: 0.8;">画室学员突破1000人，推出6L教学体系+国内外研学</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; margin-bottom: 60px; position: relative; z-index: 1;">
+                        <div style="flex: 1; padding-right: 30px; text-align: right;">
+                            <div style="background: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); border-left: 3px solid var(--primary-color);">
+                                <div style="font-size: 18px; font-weight: 600; color: var(--primary-color); margin-bottom: 10px;">2024年</div>
+                                <div style="font-size: 16px; color: var(--text-color); opacity: 0.8;">校区落地儿童AIGC课程</div>
+                            </div>
+                        </div>
+                        <div style="width: 40px; text-align: center;">
+                            <div style="width: 20px; height: 20px; background: var(--primary-color); border-radius: 50%; margin: 0 auto; border: 4px solid var(--white); box-shadow: 0 0 0 2px var(--primary-light);"></div>
+                        </div>
+                        <div style="flex: 1; padding-left: 30px;">
+                            <div style="background: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); border-right: 3px solid var(--primary-color);">
+                                <div style="font-size: 18px; font-weight: 600; color: var(--primary-color); margin-bottom: 10px;">2025年</div>
+                                <div style="font-size: 16px; color: var(--text-color); opacity: 0.8;">开启AI赋能校区新事业，赋能实体同行</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 80px;">
+                <h3 style="font-size: 24px; font-weight: 600; color: var(--primary-color); margin-bottom: 30px; text-align: center; letter-spacing: 2px;">课程服务</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+                    <div style="background: var(--white); padding: 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); text-align: center; transition: all 0.3s ease;">
+                        <div style="width: 70px; height: 70px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 4px 12px rgba(44, 95, 45, 0.2);">
+                            <span style="font-size: 32px; font-weight: 700; color: white;">01</span>
+                        </div>
+                        <div style="font-size: 18px; font-weight: 600; color: var(--text-color); margin-bottom: 10px;">专业儿童绘画教学</div>
+                       <div style="font-size: 14px; color: var(--text-color); opacity: 0.7; margin-top: 8px;">适合上海高知家庭多元审美力教育</div>
+                    </div>
+                    <div style="background: var(--white); padding: 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); text-align: center; transition: all 0.3s ease;">
+                        <div style="width: 70px; height: 70px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 4px 12px rgba(44, 95, 45, 0.2);">
+                            <span style="font-size: 32px; font-weight: 700; color: white;">02</span>
+                        </div>
+                        <div style="font-size: 18px; font-weight: 600; color: var(--text-color); margin-bottom: 10px;">艺术升学规划与指导</div>
+                       <div style="font-size: 14px; color: var(--text-color); opacity: 0.7; margin-top: 8px;">根据孩子不同方向的艺术升学制定方案，学有所成</div>
+                    </div>
+                    <div style="background: var(--white); padding: 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); text-align: center; transition: all 0.3s ease;">
+                        <div style="width: 70px; height: 70px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 4px 12px rgba(44, 95, 45, 0.2);">
+                            <span style="font-size: 32px; font-weight: 700; color: white;">03</span>
+                        </div>
+                        <div style="font-size: 18px; font-weight: 600; color: var(--text-color); margin-bottom: 10px;">国内外艺术研学</div>
+                        <div style="font-size: 14px; color: var(--text-color); opacity: 0.7; margin-top: 8px;">打开眼界，面向世界的审美格局，用脚步丈量艺术</div>
+                    </div>
+                    <div style="background: var(--white); padding: 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); text-align: center; transition: all 0.3s ease;">
+                        <div style="width: 70px; height: 70px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 4px 12px rgba(44, 95, 45, 0.2);">
+                            <span style="font-size: 32px; font-weight: 700; color: white;">04</span>
+                        </div>
+                        <div style="font-size: 18px; font-weight: 600; color: var(--text-color); margin-bottom: 10px;">美术课程加盟</div>
+                        <div style="font-size: 14px; color: var(--text-color); opacity: 0.7; margin-top: 8px;">全国超200+校区课程加盟，符合中高端美术机构</div>
+                    </div>
+                    <div style="background: var(--white); padding: 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); text-align: center; transition: all 0.3s ease;">
+                        <div style="width: 70px; height: 70px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 4px 12px rgba(44, 95, 45, 0.2);">
+                            <span style="font-size: 32px; font-weight: 700; color: white;">05</span>
+                        </div>
+                        <div style="font-size: 18px; font-weight: 600; color: var(--text-color); margin-bottom: 10px;">专业教学团队</div>
+                        <div style="font-size: 14px; color: var(--text-color); opacity: 0.7; margin-top: 8px;">中国美术学院科班、国际艺术高校科班</div>
+                    </div>
+                    <div style="background: var(--white); padding: 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); text-align: center; transition: all 0.3s ease;">
+                        <div style="width: 70px; height: 70px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 4px 12px rgba(44, 95, 45, 0.2);">
+                            <span style="font-size: 32px; font-weight: 700; color: white;">06</span>
+                        </div>
+                        <div style="font-size: 18px; font-weight: 600; color: var(--text-color); margin-bottom: 10px;">美育行业赋能</div>
+                        <div style="font-size: 14px; color: var(--text-color); opacity: 0.7; margin-top: 8px;">课程加盟与培训、首创AIGC儿童课程师训、美育行业AI提效</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程体系 -->
+    <section id="services" class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>课程体系</h2>
+                <p>6L分阶+四大板块教学，美育课标全面艺术浸润</p>
+            </div>
+            
+            <div class="service-tabs">
+                <button class="tab-btn active" data-tab="service1">世界艺术</button>
+                <button class="tab-btn" data-tab="service2">大师临创</button>
+                <button class="tab-btn" data-tab="service3">专业绘画</button>
+                <button class="tab-btn" data-tab="service4">美学创想</button>
+            </div>
+            
+            <div id="service1" class="service-content active">
+                <div class="service-detail">
+                    <div class="service-info">
+                        <h3>世界艺术</h3>
+                        <p>传统文化&AP艺术&A-LEVEL艺术教纲下沉，搜集世界各洲各国相关艺术形式、古老技法等在课堂中与孩子分享，足不出户就可以领略到各国的特色艺术，理解不同民族对世界的解读方式，拓展孩子的艺术视野。</p>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i>AP艺术&A-LEVEL艺术教纲下沉</li>
+                            <li><i class="fas fa-check-circle"></i>民族的世界的艺术</li>
+                            <li><i class="fas fa-check-circle"></i>多元化艺术形式体验</li>
+                            <li><i class="fas fa-check-circle"></i>个性化学习计划</li>
+                        </ul>
+                    </div>
+                    <div class="service-visual">
+                        <i class="fas fa-globe-americas"></i>
+                        <h4>文化理解</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="service2" class="service-content">
+                <div class="service-detail">
+                    <div class="service-info">
+                        <h3>大师临创</h3>
+                        <p>解读与学习世界艺术大师的艺术特点和表达方式，学会大师的创作方法运用到自己的创作中；了解大师们看世界的角度，从而形成自己理解世界的角度。</p>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i>像艺术大师一样思考</li>
+                            <li><i class="fas fa-check-circle"></i>分阶段技能培养</li>
+                            <li><i class="fas fa-check-circle"></i>艺术史艺术流派沉淀</li>
+                            <li><i class="fas fa-check-circle"></i>艺术鉴赏能力</li>
+                        </ul>
+                    </div>
+                    <div class="service-visual">
+                        <i class="fas fa-paint-brush"></i>
+                        <h4>审美感知</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="service3" class="service-content">
+                <div class="service-detail">
+                    <div class="service-info">
+                        <h3>专业绘画</h3>
+                        <p>国画、油画、版画等多种绘画形式，通过简单的训练，培养孩子的造型思维能力与色彩感知能力，学会立体多远地看待事物，掌握基本绘画技法。</p>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i>绘画媒材掌握</li>
+                            <li><i class="fas fa-check-circle"></i>艺术技法训练</li>
+                            <li><i class="fas fa-check-circle"></i>绘画原理解析</li>
+                            <li><i class="fas fa-check-circle"></i>解决造型表达的能力</li>
+                        </ul>
+                    </div>
+                    <div class="service-visual">
+                        <i class="fas fa-palette"></i>
+                        <h4>艺术表现</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="service4" class="service-content">
+                <div class="service-detail">
+                    <div class="service-info">
+                        <h3>美学创想</h3>
+                        <p>课程引入设计Thinking,其中包括手作、科学、地理、历史等相关知识，通过绘画的链条串联起其他学科知识，并探索综合材料的艺术创作。</p>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i>项目制课程</li>
+                            <li><i class="fas fa-check-circle"></i>设计学方法思考</li>
+                            <li><i class="fas fa-check-circle"></i>艺术潜能发掘</li>
+                            <li><i class="fas fa-check-circle"></i>多元学科浸润</li>
+                        </ul>
+                    </div>
+                    <div class="service-visual">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>创意实践</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色优势 -->
+    <section id="advantages" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>特色优势</h2>
+                <p>我们的服务优势</p>
+            </div>
+            
+            <div class="advantage-grid">
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>专业师资团队</h3>
+                    <p>由中国美术学院及国际艺术高校毕业的专业教师组成，具备丰富的教学经验和专业知识，为孩子提供高品质的艺术教育。</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>系统化课程体系</h3>
+                    <p>独创6L分阶课程体系，结合艺术博物馆、艺术游学、项目制课程、AI特色课程等，为孩子提供全面的艺术教育。</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>多元化教学方法</h3>
+                    <p>采用项目制学习、游戏化教学、跨学科融合等多种教学方法，激发孩子的学习兴趣，培养孩子的创造力和思维能力。</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>PBL项目制教学</h3>
+                    <p>通过真实项目驱动，让孩子在实践中学习，培养孩子的问题解决能力、团队协作能力和创新思维能力。</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI赋能教学</h3>
+                    <p>引入AI技术，为孩子提供个性化学习体验，通过AI评估系统实时跟踪孩子的学习进度，调整教学方案。</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>家校共育模式</h3>
+                    <p>建立良好的家校沟通机制，定期举办家长会、亲子活动等，让家长参与到孩子的艺术教育中来，共同促进孩子的成长。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务套餐 -->
+    <section class="packages">
+        <div class="container">
+            <div class="section-title">
+                <h2>服务套餐</h2>
+                <p>课程产品灵活多样，满足孩子沉浸式绘画学习</p>
+            </div>
+            
+            <div class="package-grid">
+                <div class="package-card">
+                    <h3>系统课程</h3>
+                    <p>适合4-12岁儿童的6L系统课程，培养绘画造型和创作能力</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i>全年四大板块系统课程</li>
+                        <li><i class="fas fa-check"></i>艺术博物馆深度讲解</li>
+                        <li><i class="fas fa-check"></i>户外写生活动</li>
+                        <li><i class="fas fa-check"></i>艺术专业等级考试与艺术比赛辅导</li>
+                        <li><i class="fas fa-check"></i>国内外艺术升学</li>
+                    </ul>
+                    <a href="#contact" class="package-btn">立即咨询</a>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-badge"></div>
+                    <h3>项目制课程</h3>
+                    <p>适合12岁+少年儿童的创作课程，系统提升绘画创作</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i>项目制创作课程</li>
+                        <li><i class="fas fa-check"></i>艺术升学规划与指导</li>
+                        <li><i class="fas fa-check"></i>年度艺术展览</li>
+                        <li><i class="fas fa-check"></i>国内外赛事辅导</li>
+                        <li><i class="fas fa-check"></i>学员作品集准备</li>
+                        <li><i class="fas fa-check"></i>艺术研学与项目制课程</li>
+                    </ul>
+                    <a href="#contact" class="package-btn">立即咨询</a>
+                </div>
+                
+                <div class="package-card">
+                    <h3>VIP定制套餐</h3>
+                    <p>个性化专属教学方案，满足孩子的独特艺术学习需求</p>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i>天赋美育数字测评</li>
+                        <li><i class="fas fa-check"></i>专属课程设计</li>
+                        <li><i class="fas fa-check"></i>PBL项目制定制课题</li>
+                        <li><i class="fas fa-check"></i>家长艺术教育指导课</li>
+                        <li><i class="fas fa-check"></i>国内外艺术赛事推荐</li>
+                        <li><i class="fas fa-check"></i>年度艺术成长报告</li>
+                    </ul>
+                    <a href="#contact" class="package-btn">立即咨询</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻中心 -->
+    <section id="cases" class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>新闻中心</h2>
+                <p>了解最新的艺术教育资讯</p>
+            </div>
+            
+            <div class="case-card">
+                <div class="case-header">
+                    <h3 class="case-title">孩子的艺术蜕变</h3>
+                    <span class="case-tag">创意绘画</span>
+                </div>
+                <div class="case-content">
+                    <div class="case-section">
+                        <h4>客户痛点</h4>
+                        <p>孩子有艺术天赋，喜欢画画，但不能呈现自己的想法，因为不会造型而放弃绘画学习</p>
+                    </div>
+                    <div class="case-section">
+                        <h4>解决方案</h4>
+                        <p>通过专业技巧和创作引导，逐步引导孩子完整表达画面，保持艺术兴趣，拿到绘画成绩</p>
+                    </div>
+                    <div class="case-section">
+                        <h4>量化结果</h4>
+                        <p>经过6个月的学习，小明变得开朗自信，作品在儿童艺术展中获得多个优秀奖项</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="case-card">
+                <div class="case-header">
+                    <h3 class="case-title">艺术娃藤校升学路</h3>
+                    <span class="case-tag">艺术升学</span>
+                </div>
+                <div class="case-content">
+                    <div class="case-section">
+                        <h4>客户痛点</h4>
+                        <p>文化成绩不好，却偏爱画画和艺术鉴赏，有艺术潜力挖掘</p>
+                    </div>
+                    <div class="case-section">
+                        <h4>解决方案</h4>
+                        <p>通过绘画技法练习掌握造型能力，艺术博物馆学习奠定艺术感知与洞察，形成自己的艺术思考观</p>
+                    </div>
+                    <div class="case-section">
+                        <h4>量化结果</h4>
+                        <p>通过安缇美学多元学习，30个作品自己创作，最后申请到牛津大学艺术系</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-header">
+                    <h3 class="case-title">2026年艺术研学早知道</h3>
+                    <span class="case-tag">艺术研学</span>
+                </div>
+                <div class="case-content">
+                    <div class="case-section">
+                        <h4>国内研学线路</h4>
+                        <p>2026年安缇解密湘西-张家界艺术研学</p>
+                    </div>
+                    <div class="case-section">
+                        <h4>国际研学线路</h4>
+                        <p>2026年新加坡艺术高校探校营</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见问题</h2>
+                <p>孩子学画画您最关心的问题</p>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: var(--white); padding: 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); margin-bottom: 20px;">
+                    <div style="font-size: 18px; font-weight: 600; color: var(--primary-color); margin-bottom: 15px;">孩子喜欢画画应该怎么培养？</div>
+                    <div style="font-size: 16px; color: var(--text-color); opacity: 0.8;">传统美术教学模式僵化，限制孩子想象力，孩子的绘画天因人而异，或尊重造型或注重创造，安缇的课程为孩子提供个性化教学，根据孩子的天赋特点进行教学指导。</div>
+                </div>
+                
+                <div style="background: var(--white); padding: 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); margin-bottom: 20px;">
+                    <div style="font-size: 18px; font-weight: 600; color: var(--primary-color); margin-bottom: 15px;">孩子的绘画启蒙怎么教？</div>
+                    <div style="font-size: 16px; color: var(--text-color); opacity: 0.8;">根据不同的年龄进行不同的绘画计划，教学一定要符合孩子的心理发展特征。</div>
+                </div>
+                
+                <div style="background: var(--white); padding: 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); margin-bottom: 20px;">
+                    <div style="font-size: 18px; font-weight: 600; color: var(--primary-color); margin-bottom: 15px;">孩子画画很久却没有提高？</div>
+                    <div style="font-size: 16px; color: var(--text-color); opacity: 0.8;">绘画能力的提高一方面要注重技法，掌握造型能力；另一方面要多元化多学科研究性学习。停下来想一想看一看，会有不一样的发现，绘画不止是画的的像的单方面评判。</div>
+                </div>
+                
+                <div style="background: var(--white); padding: 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); margin-bottom: 20px;">
+                    <div style="font-size: 18px; font-weight: 600; color: var(--primary-color); margin-bottom: 15px;">国内与国外艺术升学？</div>
+                    <div style="font-size: 16px; color: var(--text-color); opacity: 0.8;">国内艺术高考和国外艺术留学是完全不同的学习体系，传统的素描、色彩等学习不能解决IB/A-LEVEL艺术升学的要求，多元艺术浸润与早期学习规划成为重点。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>联系我们</h2>
+                <p>上海高品质儿童绘画课程</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h4>联系电话</h4>
+                        <p>021-54960008</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>公司地址</h4>
+                        <p>上海徐汇天钥桥路909号核心智慧园5-111；
+海浦东南洋泾路555号4-2C02</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <h4>工作时间</h4>
+                        <p>周三至周日 10:00-18:30</p>
+                    </div>
+                </div>
+                
+              
+<section id="contact-section" style="background-color: #2e592d; padding: 60px 20px; text-align: center; border-radi
+   us: 20px; margin: 20px;">
+    
+   <section id="contact-section" style="
+    background: linear-gradient(135deg, #4b7e3a 0%, #76a350 100%); 
+    padding: 60px 20px; 
+    text-align: center; 
+    border-radius: 40px; 
+    margin: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;">
+    
+    <h2 style="color: #ffffff; font-size: 32px; font-weight: bold; margin-bottom: 20px; letter-spacing: 2px;">
+        立即开启学习
+    </h2>
+    
+    <p style="color: #ffffff; font-size: 18px; opacity: 0.9; margin-bottom: 35px;">
+        联系我们，获取专业绘画学习指南
+    </p>
+
+    <!-- 模拟图片中的胶囊按钮：带微弱阴影和同色系深浅对比 -->
+    <a href="https://work.weixin.qq.com/ca/cawcdeca93ecf6b343" 
+       target="_blank" 
+       style="display: inline-block; 
+              background: rgba(255, 255, 255, 0.2); /* 半透明白色背景实现叠层感 */
+              color: #ffffff; 
+              padding: 18px 60px; 
+              border-radius: 60px; 
+              text-decoration: none; 
+              font-weight: bold; 
+              font-size: 22px; 
+              box-shadow: inset 0 2px 5px rgba(255,255,255,0.3), 0 5px 15px rgba(0,0,0,0.1);
+              border: 1px solid rgba(255,255,255,0.3);
+              transition: all 0.3s ease;">
+       点击添加企业微信
+    </a>
+
+    <!-- 如果需要放二维码，建议放在按钮下方并稍微缩小 -->
+    <div style="margin-top: 30px; opacity: 0.8;">
+        <img src="微信图片_20260429233007_329_59.jpg" 
+             style="width: 150px; border-radius: 12px; border: 3px solid rgba(255,255,255,0.2);">
+    </div>
+</section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>ARTTREE安缇美学</h3>
+                    <p>安缇美学专注于3-16岁的儿童美育，提倡多元学科艺术与项目制思考的教学，培养孩子艺术表现力和艺术创造力，独创L6体系课程结合艺术博物馆、艺术游学、项目制课程、AI特色课程等，师资为中国美术学院及国际学府学子组成，为家庭及孩子受到更全面的美学教育而不懈努力。</p>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">首页</a></li>
+                        <li><a href="#about">品牌介绍</a></li>
+                        <li><a href="#services">师资团队</a></li>
+                        <li><a href="#advantages">课程体系</a></li>
+                        <li><a href="#cases">新闻中心</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">联系方式</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:021-54960008">021-54960008</a></li>
+                        <li><a href="#">上海徐汇天钥桥路909号核心智慧园5-111</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">关注我们</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">抖音短视频</a></li>
+                        <li><a href="#">今日头条</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 ARTTREE安缇美学. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        
+        // Tab 切换
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const serviceContents = document.querySelectorAll('.service-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                serviceContents.forEach(c => c.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+        
+        // 导航栏滚动效果
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.12)';
+            } else {
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.08)';
+            }
+        });
+    </script>
+</body>
+</html>
